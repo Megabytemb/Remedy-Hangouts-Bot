@@ -21,7 +21,7 @@ def get_message_to_all(sanitised_message):
     if small_incident is not None:
         incident = short_to_long(small_incident.group())
         return remedy.parse_incident(incident)
-    if match_long_incident is not None:
+    if long_incident is not None:
         incident = add_inc_short(long_incident.group().split()[1])
         return remedy.parse_incident(incident)
     return
